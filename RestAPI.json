@@ -1,0 +1,49 @@
+[
+    {
+        "TEST_NAME": "Dummy",
+        "ACTION_CATEGORY": "TEST",
+        "ISSUE_KEY": "ACTAWPLAT-808",
+        "CLASS_ACTION": "com.act.automation.actw.rest.client.LandingZoneRestClient",
+        "ACTION": "doAWRestLogin",
+        "TEST_DATA": {
+            "RELATIVE_URL": "/2",
+            "REQUEST_TYPE": "GET",
+            "REQUEST_BODY": {
+                "dataTypes": []
+            },
+            "RESPONSE_EXPECTED_STATUS": "200",
+            "RESPONSE_EXPECTED_FLAG": "false",
+            "RESPONSE_EXPECTED_STARTWITH": "data",
+            "RESPONSE_EXPECTED_ENDWITH": {
+                "error": {
+                    "message": "valid request body",
+                    "code": "BadRequest Body"
+                }
+            }
+        }
+    },
+    {
+        "TEST_NAME": "Lzone Service Register Data Type API Negative Test Empty Request Body",
+        "ACTION_CATEGORY": "TEST",
+        "ISSUE_KEY": "ACTAWPLAT-808",
+        "CLASS_ACTION": "com.act.automation.actw.rest.client.LandingZoneRestClient",
+        "ACTION": "doAWRestLogin",
+        "TEST_DATA": {
+            "RELATIVE_URL": "",
+            "REQUEST_TYPE": "POST",
+            "REQUEST_BODY": {
+                "name": "tuba",
+                "job": "SDET"
+            },
+            "RESPONSE_EXPECTED_STATUS": "201",
+            "RESPONSE_EXPECTED_FLAG": "false",
+            "RESPONSE_EXPECTED_STARTWITH": "name",
+            "RESPONSE_EXPECTED_ENDWITH": {
+                "error": {
+                    "message": "valid request body",
+                    "code": "BadRequest Body"
+                }
+            }
+        }
+    }
+]
